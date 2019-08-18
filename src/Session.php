@@ -222,6 +222,7 @@ class Session
             $this->accessToken = $response->access_token;
             $this->expirationTime = time() + $response->expires_in;
             $this->scope = isset($response->scope) ? $response->scope : $this->scope;
+            if(isset($response->state) $this->state = $response->state 
 
             return true;
         }
